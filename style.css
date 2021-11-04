@@ -5,14 +5,21 @@
 }
 
 html {
+    color: white;
     font-family: 'Courier New', Courier, monospace;
 }
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
 
 header {
     position: relative;
     background-image: url(img/bg.jpg);
     height: 100vh;
-
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -34,17 +41,18 @@ h1 {
     left: 0;
     background-color: white;
     width: 100vw;
-    text-align: right;
+    text-align: center;
     padding: 0px 50px;
     line-height: 75px;
 }
 
 .logo {
-    position: fixed;
+    padding: 5px 10px 14px 5px;
     width: 280px;
     top: 1%;
     left: 2%;
-    max-width: 280px
+    max-width: 280px;
+    vertical-align: bottom;
 }
 
 h2 {
@@ -72,69 +80,11 @@ i {
     background-color: black;
 }
 
-@media (max-width:1366px) and (orientation:landscape) {
-    .logo {
-        width: 275px;
-    }
 
-    h1 {
-        font-size: 4vw;
-        line-height: 70px;
-    }
-}
-
-@media (max-width:1300px) {
-    h1 {
-        font-size: 4.5vw;
-        line-height: 70px;
-    }
-
-    h2 {
-        font-size: 6vw;
-        padding: 8px 12px;
-    }
-}
-
-@media (max-width:860px) {
-
-
-    h1 {
-        font-size: 4vw;
-        line-height: 70px;
-    }
-
-    h2 {
-        font-size: 5vw;
-        padding: 8px 12px;
-    }
-}
-
-
-@media (max-width:830px) and (orientation:landscape) {
-    .logo {
-        width: 230px;
-    }
-
-    h1 {
-
-        font-size: 3.5vw;
-        line-height: 50px;
-    }
-}
-
-@media (max-width:667px) and (orientation:landscape) {
-
-
+@media (max-width:700px) {
     .logo {
         width: 210px;
-    }
-
-
-}
-
-@media (max-width:650px) {
-    .logo {
-        width: 210px;
+        padding-bottom: 8px;
     }
 
     h1 {
@@ -144,28 +94,19 @@ i {
     }
 }
 
-@media (max-width:600px) {
+@media (max-width:540px) {
+
+    .logo {
+        width: 200px;
+    }
 
     h1 {
-        line-height: 50px;
-    }
-
-    h2 {
-        font-size: 5vw;
-    }
-
-    i {
-        font-size: 35px;
-        width: 35px;
-        height: 35px;
+        padding: 0px 20px;
+        font-size: 3.5vw;
     }
 }
 
 @media (max-width:420px) {
-
-    h1 {
-        padding: 0px 20px;
-    }
 
     .logo {
         width: 180px;
@@ -176,15 +117,15 @@ i {
     }
 }
 
-@media (max-width:320px) {
+@media (max-width:370px) {
 
     h1 {
         padding: 0px 15px;
-        line-height: 40px;
+
     }
 
     .logo {
-        width: 150px;
+        width: 140px;
     }
 }
 
@@ -203,44 +144,111 @@ i {
 
 
 
+main {
+    background-color: black;
+}
+
 .team {
-
-    margin: 10vh;
-
+    max-width: 1600px;
+    margin: 30px auto 0;
+    padding: 5%;
+    background-color: black;
+    text-align: center;
+    overflow: hidden;
 }
 
-.profesor {
-    position: relative;
+.descryption {
+    padding: 40px 0;
 }
 
-.imgteam {
-    position: absolute;
+
+
+img.imgperson {
     border-radius: 50%;
-    width: 20vw;
-    top: 0;
-    left: 0;
-
+    width: 55vw;
+    max-width: 300px;
 }
+
+
 
 h3 {
-    position: absolute;
-    color: white;
-    font-size: 3rem;
-    top: 4rem;
-    left: 40%;
+    font-size: 16px;
+    text-align: center;
 }
 
 p {
-    position: absolute;
-    color: white;
-    font-size: 2rem;
-    top: 8rem;
-    left: 35%;
+    font-size: 12px;
 }
 
 
 
-main {
-    background-color: black;
-    height: 200vh;
+@media (min-width:640px) {
+
+    img.imgperson {
+        width: 40vw;
+    }
+
+
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 17px;
+        margin-right: 10px;
+    }
+}
+
+@media (min-width:1024px) {
+
+    .person1 {
+        float: left;
+        width: 60%;
+    }
+
+    .about {
+        float: left;
+        width: 40%;
+    }
+
+    .team .descryption:nth-of-type(even) .person1 {
+        float: right;
+
+
+    }
+
+    .descryption:nth-of-type(even) {
+        background-color: white;
+        color: black;
+        box-shadow: inset 10px 5px 5px black;
+        padding-left: 30px;
+    }
+
+    h3 {
+        font-size: 25px;
+
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
+
+
+@media (min-width:1300px) {
+
+    img.imgperson {
+        width: 50vw;
+    }
+
+
+
+    h3 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 22px;
+    }
 }
