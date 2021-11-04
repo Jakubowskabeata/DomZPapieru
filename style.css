@@ -5,8 +5,7 @@
 }
 
 html {
-    font-size: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 header {
@@ -18,7 +17,7 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
+    overflow: hidden;
 }
 
 header>* {
@@ -28,19 +27,28 @@ header>* {
 h1 {
     z-index: 1;
     position: fixed;
-    font-size: 5rem;
+    font-size: 2.5vw;
     text-transform: uppercase;
-    color: white;
+    color: black;
     top: 0;
     left: 0;
-    background-color: rgb(8, 8, 8);
+    background-color: white;
     width: 100vw;
-    text-align: center;
-    padding: 10px 20px;
+    text-align: right;
+    padding: 0px 50px;
+    line-height: 75px;
+}
+
+.logo {
+    position: fixed;
+    width: 280px;
+    top: 1%;
+    left: 2%;
+    max-width: 280px
 }
 
 h2 {
-    font-size: 4rem;
+    font-size: 3.5vw;
     text-transform: uppercase;
     top: 50%;
     left: 0;
@@ -48,78 +56,191 @@ h2 {
     text-align: center;
     color: white;
     padding: 10px 15px;
-    box-shadow: 0 0 10rem black;
+    box-shadow: 0 0 10px black;
 }
 
 i {
     left: 50%;
     bottom: 10%;
-    font-size: 5rem;
+    font-size: 50px;
     color: white;
     border: 2px solid black;
     border-radius: 50%;
-    width: 5rem;
-    height: 5rem;
+    width: 50px;
+    height: 50px;
     text-align: center;
     background-color: black;
 }
 
-@media (max-width:900px) {
+@media (max-width:1366px) and (orientation:landscape) {
+    .logo {
+        width: 275px;
+    }
 
     h1 {
-        font-size: 4rem;
-        padding: 8px 16px;
-    }
-
-    h2 {
-        font-size: 3rem;
-        padding: 8px 12px;
-    }
-
-    i {
-        font-size: 4rem;
-        width: 4rem;
-        height: 4rem;
+        font-size: 4vw;
+        line-height: 70px;
     }
 }
 
-@media (max-width:690px) {
+@media (max-width:1300px) {
     h1 {
-        font-size: 3rem;
-        padding: 8px 16px;
+        font-size: 4.5vw;
+        line-height: 70px;
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: 6vw;
         padding: 8px 12px;
-    }
-
-    i {
-        font-size: 3rem;
-        width: 3rem;
-        height: 3rem;
     }
 }
 
-@media (max-width:570px) {
+@media (max-width:860px) {
+
+
     h1 {
-        font-size: 2rem;
-        padding: 8px 16px;
+        font-size: 4vw;
+        line-height: 70px;
     }
 
     h2 {
-        font-size: 1.5rem;
+        font-size: 5vw;
         padding: 8px 12px;
-    }
-
-    i {
-        font-size: 2rem;
-        width: 2rem;
-        height: 2rem;
     }
 }
 
-body {
+
+@media (max-width:830px) and (orientation:landscape) {
+    .logo {
+        width: 230px;
+    }
+
+    h1 {
+
+        font-size: 3.5vw;
+        line-height: 50px;
+    }
+}
+
+@media (max-width:667px) and (orientation:landscape) {
+
+
+    .logo {
+        width: 210px;
+    }
+
+
+}
+
+@media (max-width:650px) {
+    .logo {
+        width: 210px;
+    }
+
+    h1 {
+        font-size: 3.5vw;
+        line-height: 45px;
+        letter-spacing: -1px;
+    }
+}
+
+@media (max-width:600px) {
+
+    h1 {
+        line-height: 50px;
+    }
+
+    h2 {
+        font-size: 5vw;
+    }
+
+    i {
+        font-size: 35px;
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width:420px) {
+
+    h1 {
+        padding: 0px 20px;
+    }
+
+    .logo {
+        width: 180px;
+    }
+
+    h2 {
+        font-size: 7vw;
+    }
+}
+
+@media (max-width:320px) {
+
+    h1 {
+        padding: 0px 15px;
+        line-height: 40px;
+    }
+
+    .logo {
+        width: 150px;
+    }
+}
+
+@media (max-width:280px) {
+
+    h1 {
+        font-size: 3.7vw;
+        line-height: 35px;
+        letter-spacing: -1px;
+    }
+
+    .logo {
+        width: 130px;
+    }
+}
+
+
+
+.team {
+
+    margin: 10vh;
+
+}
+
+.profesor {
+    position: relative;
+}
+
+.imgteam {
+    position: absolute;
+    border-radius: 50%;
+    width: 20vw;
+    top: 0;
+    left: 0;
+
+}
+
+h3 {
+    position: absolute;
+    color: white;
+    font-size: 3rem;
+    top: 4rem;
+    left: 40%;
+}
+
+p {
+    position: absolute;
+    color: white;
+    font-size: 2rem;
+    top: 8rem;
+    left: 35%;
+}
+
+
+
+main {
     background-color: black;
     height: 200vh;
 }
