@@ -167,6 +167,7 @@ img.imgperson {
     border-radius: 50%;
     width: 55vw;
     max-width: 300px;
+    transition: 0.5s;
 }
 
 
@@ -180,7 +181,10 @@ p {
     font-size: 12px;
 }
 
+img.imgperson:hover {
+    box-shadow: 0 0 1em 0.5em maroon;
 
+}
 
 @media (min-width:640px) {
 
@@ -253,12 +257,13 @@ p {
     }
 }
 
+
+
 /* stopka */
 footer {
     background-color: white;
     color: black;
-    font-family: saira, sans-serif;
     text-align: center;
-    padding: 20px;
-    font-size: 20px;
+    padding: 15px;
+    font-size: 15px;
 }
