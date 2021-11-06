@@ -60,7 +60,7 @@ h2 {
     text-transform: uppercase;
     top: 50%;
     left: 0;
-    width: 100vw;
+    width: 100%;
     text-align: center;
     color: white;
     padding: 10px 15px;
@@ -78,6 +78,18 @@ i {
     height: 50px;
     text-align: center;
     background-color: black;
+}
+
+@media (max-width:1024px) and (orientation:portrait) {
+    header {
+
+        background-image: url(img/bg2.jpg);
+        background-position: bottom;
+    }
+
+    h2 {
+        font-size: 3vh;
+    }
 }
 
 
@@ -110,10 +122,6 @@ i {
 
     .logo {
         width: 180px;
-    }
-
-    h2 {
-        font-size: 7vw;
     }
 }
 
@@ -150,7 +158,7 @@ main {
 
 .team {
     max-width: 1600px;
-    margin: 30px auto 0;
+    margin: 20px auto 0;
     padding: 5%;
     background-color: black;
     text-align: center;
@@ -167,7 +175,8 @@ img.imgperson {
     border-radius: 50%;
     width: 55vw;
     max-width: 300px;
-    transition: 0.5s;
+    transition: 1s;
+    margin-bottom: 15px;
 }
 
 
