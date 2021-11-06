@@ -23,7 +23,7 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scrol;
     overflow: hidden;
 }
 
@@ -98,6 +98,7 @@ i {
 
         background-image: url(img/bg2.jpg);
         background-position: center;
+
     }
 
     h2 {
